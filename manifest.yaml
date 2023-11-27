@@ -4,6 +4,7 @@ metadata:
   name: currencyservice
   namespace: ${namespace}
 spec:
+  replicas: ${replicas}
   selector:
     matchLabels:
       app: currencyservice
@@ -12,7 +13,6 @@ spec:
       labels:
         app: currencyservice
     spec:
-      replicas: ${replicas}
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       securityContext:
